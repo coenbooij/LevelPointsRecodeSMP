@@ -84,6 +84,7 @@ public class lpsCommand implements CommandExecutor {
                 new BukkitRunnable() {
                     @Override
                     public void run() {
+                        System.out.println("Top command in chat recognized");
                         LevelPoints.getTopListSettings().sendTopList(player);
                     }
                 }.runTaskAsynchronously(LevelPoints.getInstance());

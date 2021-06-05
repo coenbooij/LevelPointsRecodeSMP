@@ -93,7 +93,7 @@ public final class LevelPoints extends JavaPlugin{
 
         System.out.println(ChatColor.DARK_AQUA + "=============================");
         System.out.println(ChatColor.AQUA + "LevelPoints Plugin");
-        System.out.println(ChatColor.AQUA + "Developer: Zoon20X");
+        System.out.println(ChatColor.AQUA + "Developer: REDROAN04 + pizzaboysz");
         System.out.println(ChatColor.AQUA + "Version: " + this.getDescription().getVersion());
         System.out.println(ChatColor.AQUA + "MC-Compatible: 1.8-1.16.5");
         System.out.println(ChatColor.DARK_AQUA + "Enabled");

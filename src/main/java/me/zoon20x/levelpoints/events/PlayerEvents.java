@@ -5,6 +5,7 @@ import me.zoon20x.levelpoints.containers.Player.PlayerData;
 import me.zoon20x.levelpoints.containers.Settings.Configs.Rewards.RewardData;
 import me.zoon20x.levelpoints.containers.Settings.Configs.Rewards.RewardSettings;
 import me.zoon20x.levelpoints.containers.Settings.Configs.Rewards.RewardTriggerType;
+import me.zoon20x.levelpoints.containers.Settings.Configs.TopListSettings;
 import me.zoon20x.levelpoints.events.CustomEvents.EarnExpEvent;
 import me.zoon20x.levelpoints.events.CustomEvents.LevelUpEvent;
 import me.zoon20x.levelpoints.events.CustomEvents.PrestigeEvent;
@@ -88,6 +89,10 @@ public class PlayerEvents implements Listener {
 
     @EventHandler
     public void onLevelUP(LevelUpEvent event) {
+        PlayerData data1 = event.getPlayerData();
+        TopListSettings tls = new TopListSettings();
+        tls.modifyLevel(data1);
+        tls.generateTopCache(5000);
         RewardSettings rewardSettings = LevelPoints.getRewardSettings();
         if(Bukkit.getPlayer(event.getPlayerData().getUUID()) == null){
             return;
